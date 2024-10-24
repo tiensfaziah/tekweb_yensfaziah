@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        /* Default font style */
+        body {
+            font-family: Times, sans-serif;
+        }
+
+        /* To-Do List styles */
+        #task-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        #task-list li.completed {
+            text-decoration: line-through;
+        }
+
+        #task-list button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Picture -->
+        <div class="profile-section">
+            <img src="Gambar/iens.jpg" alt="Profile Picture" class="profile-picture" style="width:220px; height: 220px; border-radius: 50%; object-fit: cover;">
+        </div>
+
+        <!-- About Me Section -->
+        <div class="tentang-ku">
+            <h2>Tentang ku</h2>
+            <p>aku mahasiswa semester 3 di Universitas Ahmad Dahlan, aku memiliki hobi menyanyi, menari.
+            <br>Aku juga suka menulis diary. Minuman kesukaan ku cookies and cream.
+            <br>Warna kesukaan ku Putih. Dan aku suka kelinci.</p>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="projek">
+            <h2>Projek</h2>
+            <ul>
+                <li><a href="#">Project 1 Title</a> - Brief description of Project 1.</li>
+                <li><a href="#">Project 2 Title</a> - Brief description of Project 2.</li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="kontak">
+            <h2>Kontak</h2>
+            <p>Instagram: <a href="https://instagram.com/yensfziah" target="_blank">@yensfziah</a></p>
+        </div>
+
+        <!-- To-Do List Section -->
+        <div class="to-do list">
+            <h2>My To-Do List</h2>
+            <!-- Input to add a new task -->
+            <input type="text" id="new-task" placeholder="Add a new task">
+            <button onclick="addTask()">Add Task</button>
+            <!-- List to display tasks -->
+            <ul id="task-list">
+                <!-- Task items will be added here -->
+            </ul>
+        </div>
+
+        <!-- Interactive Features -->
+        <div class="interactive-features">
+            <!-- Change Background Color -->
+            <div>
+                <label for="bgColor">Pilih Warna Latar Belakang:</label>
+                <select id="bgColor" onchange="changeBackgroundColor()">
+                    <option value="white">Putih</option>
+                    <option value="lightblue">Biru Muda</option>
+                    <option value="lightgreen">Hijau Muda</option>
+                    <option value="Pink">Pink</option>
+                </select>
+            </div>
+
+            <!-- Change Font Size -->
+            <div>
+                <label for="fontSize">Ukuran Huruf:</label>
+                <input type="range" id="fontSize" min="10" max="40" onchange="changeFontSize()" />
+            </div>
+
+            <!-- Toggle Dark Mode -->
+            <div>
+                <button onclick="toggleDarkMode()">Mode Gelap</button>
+            </div>
+
+            <!-- Change Font Style -->
+            <div>
+                <button onclick="changeFontStyle('serif')">Serif</button>
+                <button onclick="changeFontStyle('sans-serif')">Sans-Serif</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Include external script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
