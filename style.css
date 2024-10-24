@@ -1,0 +1,101 @@
+body {
+  font-family: Times, serif, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #1d6cff;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #245fff;
+  font-size: 24px;
+}
+
+.tentang-ku, .projek, .kontak, .to-do{
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.projek ul {
+  list-style: none;
+  padding: 0;
+}
+
+.projek ul li {
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.projek ul li a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.kontak p {
+  margin: 5px 0;
+}
+
+.kontak a {
+  color: #007BFF;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for Dark Mode */
+.dark-mode {
+    background-color: black;
+    color: white; /* Text becomes white in dark mode */
+}
+
+/* Update specific sections with padding when in dark mode */
+.dark-mode .tentang-ku,
+.dark-mode .projek,
+.dark-mode .kontak {
+    background-color: #333; /* Darker background for sections */
+    color: white; /* Ensure text color remains white */
+}
+
+.dark-mode .projek ul li {
+    background-color: #444; /* Darker background for project list items */
+}
+
+.dark-mode a {
+    color: #4da8ff; /* Change link color to a lighter blue for better contrast */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
